@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    @apply bg-cream-100 text-gray-800 antialiased;
+  }
+
+  * {
+    @apply box-border;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-sage-500;
+  }
+}
+
+@layer utilities {
+  /* Shimmer loading skeleton */
+  .shimmer {
+    background: linear-gradient(
+      90deg,
+      theme('colors.cream.100') 0%,
+      theme('colors.cream.200') 40%,
+      theme('colors.sage.50') 60%,
+      theme('colors.cream.100') 100%
+    );
+    background-size: 800px 100%;
+    animation: shimmer 1.6s ease-in-out infinite;
+  }
+
+  /* Scrollbar styling for chat area & recipe container */
+  .chat-scroll::-webkit-scrollbar,
+  .recipe-response-container::-webkit-scrollbar {
+    width: 6px;
+  }
+  .chat-scroll::-webkit-scrollbar-track,
+  .recipe-response-container::-webkit-scrollbar-track {
+    @apply bg-cream-100 rounded-full;
+  }
+  .chat-scroll::-webkit-scrollbar-thumb,
+  .recipe-response-container::-webkit-scrollbar-thumb {
+    @apply bg-sage-300 rounded-full;
+  }
+  .chat-scroll::-webkit-scrollbar-thumb:hover,
+  .recipe-response-container::-webkit-scrollbar-thumb:hover {
+    @apply bg-sage-400;
+  }
+}

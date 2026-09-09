@@ -1,0 +1,36 @@
+﻿# =============================================================
+# Recipe Preparation Agent — web/ .gitignore (Next.js app)
+# =============================================================
+
+# --- Secrets -------------------------------------------------
+.env
+.env.local
+.env.*.local
+.env.development
+.env.production
+.env.staging
+.env.test
+
+# --- Next.js build output ------------------------------------
+.next/
+out/
+
+# --- Dependencies --------------------------------------------
+node_modules/
+
+# --- TypeScript build info -----------------------------------
+tsconfig.tsbuildinfo
+
+# --- Cache ---------------------------------------------------
+.cache/
+.eslintcache
+
+# --- OS noise ------------------------------------------------
+.DS_Store
+Thumbs.db
+
+# --- Logs ----------------------------------------------------
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
